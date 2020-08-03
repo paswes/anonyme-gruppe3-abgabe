@@ -1,0 +1,18 @@
+<h1>Play Round</h1>
+
+<h2>Opponent</h2>
+<p>Name: {{opponent.name}}</p>
+<p>Score: {{opponent.score}}</p>
+
+<h2>Choose Action</h2>
+<ul>
+    {{#each actions}}
+        <li>
+            <form method="POST" action="/game/play/{{actions_pk}}">
+                <input type="submit" value="{{message}}" />
+            </form>
+        </li>
+    {{/each}}
+</ul>
+
+
